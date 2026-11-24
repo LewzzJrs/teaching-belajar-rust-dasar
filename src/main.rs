@@ -222,3 +222,48 @@ fn array_access() {
     let b = array[4];
     println!("{} {}", a, b);
 }
+
+#[test]
+fn mutable_array() {
+    let mut array: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("{:?}", array);
+
+    let a = array[0];
+    let b = array[4];
+    println!("{} {}", a, b);
+
+    array[0] = 10;
+    array[4] = 50;
+    println!("{:?}", array);
+}
+
+#[test]
+fn length_array() {
+    let mut array: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("{:?}", array);
+
+    let a = array[0];
+    let b = array[4];
+    println!("{} {}", a, b);
+
+    array[0] = 10;
+    array[4] = 50;
+    println!("{:?}", array);
+
+    let length = array.len();
+    println!("{}", length);
+}
+
+#[test]
+fn two_dimensional_array() {
+    let matrix: [[i32; 2]; 2] = [
+        [1, 2],
+        [3, 4]
+    ];
+
+    println!("{:?}", matrix);
+    println!("{}", matrix[0][0]);
+    println!("{}", matrix[0][1]);
+    println!("{}", matrix[1][0]);
+    println!("{}", matrix[1][1]);
+}
